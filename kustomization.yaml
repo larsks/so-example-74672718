@@ -12,3 +12,4 @@ resources:
 
 configurations:
   - transformers/namespace.yaml
+  - transformers/namereference.yaml

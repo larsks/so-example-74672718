@@ -1,0 +1,4 @@
+namespace:
+  - kind: IngressRoute
+    path: spec/routes/services/namespace
+    create: true

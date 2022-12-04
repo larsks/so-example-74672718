@@ -1,3 +1,13 @@
+# This is a configuration for the Kustomize nameReference transformer [1].
+#
+# It ensures that when we perform name transformations (e.g. using the
+# "namePrefix" or "nameSuffix" options in kustomization.yaml) that references
+# to resources are updated to use the modified name.
+#
+# Kustomize knows how to do this for native Kubernetes resources, but needs an
+# explicit configuration for CRDs.
+#
+# [1]: https://github.com/kubernetes-sigs/kustomize/blob/master/examples/transformerconfigs/README.md#name-reference-transformer
 nameReference:
   - kind: Service
     fieldSpecs:

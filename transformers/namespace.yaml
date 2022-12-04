@@ -1,3 +1,10 @@
+# This is a configuration for the Kustomize namespace transformer [1].
+#
+# It ensures that when we set the namespace using the "namespace:" option
+# in kustomization.yaml that references to the namespace are updated appropriately.
+#
+# Kustomize knows how to do this for native Kubernetes resources, but needs an
+# explicit configuration for CRDs.
 namespace:
   - kind: IngressRoute
     path: spec/routes/services/namespace
